@@ -6,7 +6,7 @@ import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import "/home/clifga/project-2/src/Components/CarouselCards.css";
 
-const Home = ({handleClick}) => {
+const Home = () => {
   const [topAnime, setTopAnime] = useState([]);
   useEffect(() => {
     fetch("https://api.jikan.moe/v4/top/anime")
@@ -27,7 +27,7 @@ const Home = ({handleClick}) => {
   };
 
   const renderCarousel = topAnime.map((element) => {
-    return <AnimeCards key={element.name} animes={element} handleClick={handleClick}/>;
+    return <AnimeCards key={element.name} animes={element} />;
   });
   return (
     <div className="container">

@@ -8,20 +8,12 @@ import Typography from "@mui/material/Typography";
 
 export default function AnimeCards({ animes }) {
   const clickButton = () => {
-    const favs = {
-      title: animes.title,
-      score: animes.score,
-      episodes: animes.episodes,
-      year: animes.year,
-      type: animes.type,
-      url: animes.url,
-    };
     fetch("http://localhost:3000/favorite", {
       method: "POST",
       headers: {
         "Content-type": "Application/json",
       },
-      body: JSON.stringify(favs),
+      body: JSON.stringify(animes),
     })
       .then((res) => res.json())
 

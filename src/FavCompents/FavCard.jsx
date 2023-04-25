@@ -6,15 +6,29 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
-const FavCard = ({ fav }) => {
-  console.log(fav.url);
+const FavCard = ({ fav, updateFavs }) => {
+  const handleDelete = () => {
+    fetch(`http://localhost:3000/favorite/${fav.id}`, {
+      method: "DELETE",
+      body: JSON.stringify(fav),
+    })
+      .then((res) => res.json())
+      .then((data) => data);
+    updateFavs(fav.id);
+  };
+
   return (
     <Card
       sx={{ maxWidth: 345 }}
       className="anime-card"
       style={{ height: "450px", width: "300px" }}
     >
-      <CardMedia component="img" alt={fav.title} height="140" image={fav.url} />
+      <CardMedia
+        component="img"
+        alt={fav.title}
+        height="140"
+        image={fav.images.jpg.image_url}
+      />
       <CardContent>
         <Typography gutterBottom variant="h6" component="div">
           {fav.title}
@@ -29,8 +43,10 @@ const FavCard = ({ fav }) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Remove From Favorite</Button>
-        <Button target="_blank" size="small">
+        <Button onClick={handleDelete} size="small">
+          Remove From Favorite
+        </Button>
+        <Button href={fav.url} target="_blank" size="small">
           Learn More
         </Button>
       </CardActions>
