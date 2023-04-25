@@ -9,7 +9,7 @@ import Typography from "@mui/material/Typography";
 export default function AnimeCards({ animes }) {
   console.log(animes);
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345 }} className="anime-card" style={{ height: "350px", width: "300px" }}>
       <CardMedia
         component="img"
         alt="green iguana"

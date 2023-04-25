@@ -4,15 +4,30 @@ import { useEffect, useState } from "react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import "/home/clifga/project-2/src/Components/CarouselCards.css";
+//import "react-alice-carousel/lib/scss/alice-carousel.scss";
+
 import AnimeList from "../Components/AnimeList";
+
 
 const Home = () => {
   const [topAnime, setTopAnime] = useState([]);
   useEffect(() => {
     fetch("https://api.jikan.moe/v4/top/anime")
       .then((res) => res.json())
-      .then((data) => setTopAnime(data.data.slice(0, 10)));
+      .then((data) => setTopAnime(data.data.slice(0, 25)));
   }, []);
+
+  const responsive = {
+    0: {
+      items: 1,
+    },
+    600: {
+      items: 3,
+    },
+    960: {
+      items: 5,
+    },
+  };
 
   const renderCarousel = topAnime.map((element) => {
     return <AnimeCards key={element.name} animes={element} />;
@@ -22,12 +37,18 @@ const Home = () => {
       <div>
         <br></br>
         <br></br>
-        <h1>Top 10 Animes</h1>
+        <h1>Top 25 Animes</h1>
       </div>
       <div className="carousel-container">
-        <AliceCarousel role="presentation">{renderCarousel}</AliceCarousel>
+        <AliceCarousel
+          role="presentation"
+          stagePadding={{ paddingLeft: 10, paddingRight: 10 }}
+          responsive={responsive}
+        >
+          {renderCarousel}
+        </AliceCarousel>
       </div>
-       <AnimeList />
+      <AnimeList />
     </div>
   );
 };
