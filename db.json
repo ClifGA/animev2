@@ -48,5 +48,34 @@
       "article": "2",
       "id": 8
     }
+  ],
+  "favorite": [
+    {
+      "title": "Fullmetal Alchemist: Brotherhood",
+      "score": 9.1,
+      "episodes": 64,
+      "year": 2009,
+      "type": "TV",
+      "url": "https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood",
+      "id": 1
+    },
+    {
+      "title": "Fullmetal Alchemist: Brotherhood",
+      "score": 9.1,
+      "episodes": 64,
+      "year": 2009,
+      "type": "TV",
+      "url": "https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood",
+      "id": 2
+    },
+    {
+      "title": "Steins;Gate",
+      "score": 9.08,
+      "episodes": 24,
+      "year": 2011,
+      "type": "TV",
+      "url": "https://myanimelist.net/anime/9253/Steins_Gate",
+      "id": 3
+    }
   ]
 }

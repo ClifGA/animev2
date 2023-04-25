@@ -7,6 +7,27 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
 export default function AnimeCards({ animes }) {
+  const clickButton = () => {
+    const favs = {
+      title: animes.title,
+      score: animes.score,
+      episodes: animes.episodes,
+      year: animes.year,
+      type: animes.type,
+      url: animes.url,
+    };
+    fetch("http://localhost:3000/favorite", {
+      method: "POST",
+      headers: {
+        "Content-type": "Application/json",
+      },
+      body: JSON.stringify(favs),
+    })
+      .then((res) => res.json())
+
+      .then((data) => data);
+  };
+
   return (
     <Card
       sx={{ maxWidth: 345 }}
@@ -33,7 +54,9 @@ export default function AnimeCards({ animes }) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Add to Favorite</Button>
+        <Button onClick={clickButton} size="small">
+          Add to Favorite
+        </Button>
         <Button href={animes.url} target="_blank" size="small">
           Learn More
         </Button>

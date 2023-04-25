@@ -7,13 +7,16 @@ import Forum from "./Pages/Forum";
 import ContactUs from "./Pages/ContactUs";
 
 const App = () => {
+  const handleClick = (anime) => {
+    console.log('test')
+  };
   return (
     <BrowserRouter>
       <MuiNavBar></MuiNavBar>
 
       <div>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home handleClick={handleClick} />} />
           <Route path="myfavorite" element={<MyFavorites />} />
           <Route path="forum" element={<Forum />} />
           <Route path="contactus" element={<ContactUs />} />
