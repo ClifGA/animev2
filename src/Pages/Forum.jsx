@@ -27,6 +27,7 @@ const Forum = () => {
     <div>
       <br></br>
       <br></br>
+      <br></br>
       <h1>Discussions</h1>
       <Comments posts={posts} />
       {hide ? <PostOnForm handleAddPost={handleAddPost} /> : null}
