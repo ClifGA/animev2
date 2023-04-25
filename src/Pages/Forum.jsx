@@ -5,6 +5,7 @@ import PostOnForm from "../FormCompts/PostOnForm";
 
 const Forum = () => {
   const [posts, Setposts] = useState([]);
+  const [hide, SetHide] = useState(true);
   useEffect(() => {
     fetch("http://localhost:3000/posts")
       .then((res) => res.json())
@@ -18,15 +19,20 @@ const Forum = () => {
     Setposts(updatedPosts);
   }
 
+  function handleShowForm() {
+    SetHide(!hide);
+  }
+
   return (
     <div>
       <br></br>
       <br></br>
       <h1>Discussions</h1>
       <Comments posts={posts} />
-      <PostOnForm handleAddPost={handleAddPost}/>
-      <Button sx={{ background: "black" }}>Make A Comment</Button>
-
+      {hide ? <PostOnForm handleAddPost={handleAddPost} /> : null}
+      <Button onClick={handleShowForm} sx={{ background: "black" }}>
+        {!hide ? "Make A Comment" : "Collapse"}
+      </Button>
     </div>
   );
 };
