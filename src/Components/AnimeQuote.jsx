@@ -1,11 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/prop-types */
 import Typography from "@mui/material/Typography";
+import "/home/clifga/new-project/Phase-2-Project-anime/src/Components/AnimeQuoteCards.css";
 
 function AnimeQuote({ quotes }) {
-  console.log(quotes);
   return (
-    <div>
+    <div className="QuoteCard">
       <Typography gutterBottom variant="h4" component="div" color="red">
         {"Today's Quote"}
       </Typography>

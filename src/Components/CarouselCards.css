@@ -2,6 +2,9 @@
   max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
+  height: 100%;
+  float: left;
+  margin-top: 130px;
 }
 
 .carousel-container {
@@ -19,4 +22,9 @@
 .alice-carousel {
   width: 100%;
   margin: 0;
+  padding: 0;
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  z-index: 1;
 }
