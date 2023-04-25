@@ -5,6 +5,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import "/home/clifga/new-project/Phase-2-Project-anime/src/FavCompents/FavCards.css";
 
 const FavCard = ({ fav, updateFavs }) => {
   const handleDelete = () => {
@@ -20,7 +21,7 @@ const FavCard = ({ fav, updateFavs }) => {
   return (
     <Card
       sx={{ maxWidth: 345 }}
-      className="anime-card"
+      className="Cards"
       style={{ height: "450px", width: "300px" }}
     >
       <CardMedia

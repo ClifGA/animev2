@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import "/home/clifga/project-2/src/Components/CarouselCards.css";
+import AnimeQuote from "../Components/AnimeQuote";
 
 const Home = () => {
   const [topAnime, setTopAnime] = useState([]);
@@ -12,6 +13,15 @@ const Home = () => {
     fetch("https://api.jikan.moe/v4/top/anime")
       .then((res) => res.json())
       .then((data) => setTopAnime(data.data.slice(0, 25)));
+  }, []);
+
+  const [quotes, setQuotes] = useState([]);
+  useEffect(() => {
+    fetch("https://animechan.vercel.app/api/random")
+      .then((res) => res.json())
+      .then((data) => {
+        setQuotes(data);
+      });
   }, []);
 
   const responsive = {
@@ -35,8 +45,10 @@ const Home = () => {
         <br></br>
         <br></br>
         <br></br>
-        <h1>Top 25 Animes</h1>
+        <br></br>
       </div>
+      <AnimeQuote quotes={quotes} />
+      <h1>Top 25 Animes</h1>
       <div className="carousel-container">
         <br></br>
         <AliceCarousel

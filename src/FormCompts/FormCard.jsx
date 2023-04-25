@@ -4,11 +4,14 @@ const FormCard = ({ posts }) => {
   return (
     <div
       style={{
-        borderRadius: "5px",
-        backgroundColor: "#f0f0f0",
-        padding: "10px",
+        borderRadius: "10px",
+        backgroundColor: "#f2f2f2",
+        padding: "20px",
         display: "flex",
         justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "columnStart",
+        margin: "10px",
       }}
     >
       <div>
