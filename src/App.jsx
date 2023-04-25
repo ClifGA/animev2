@@ -7,8 +7,6 @@ import Forum from "./Pages/Forum";
 import ContactUs from "./Pages/ContactUs";
 
 const App = () => {
-
-    
   return (
     <BrowserRouter>
       <MuiNavBar></MuiNavBar>

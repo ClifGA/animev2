@@ -1,26 +1,32 @@
 import { Button } from "@mui/material";
-import PostAForm from "../Components/PostAForm";
 import { useEffect, useState } from "react";
-import FormCard from "../Components/FormCard";
+import Comments from "../FormCompts/Comments";
+import PostOnForm from "../FormCompts/PostOnForm";
 
 const Forum = () => {
-  const [post, setPosts] = useState([]);
-
+  const [posts, Setposts] = useState([]);
   useEffect(() => {
     fetch("http://localhost:3000/posts")
-      .then((r) => r.json())
-      .then((data) => setPosts(data));
+      .then((res) => res.json())
+      .then((data) => {
+        Setposts(data);
+      });
   }, []);
 
-  console.log(post);
+  function handleAddPost(addPost) {
+    const updatedPosts = [...posts, addPost];
+    Setposts(updatedPosts);
+  }
 
   return (
     <div>
-      <h1>Discussion</h1>
-
+      <br></br>
+      <br></br>
       <h1>Discussions</h1>
-      <FormCard posts={post} />
+      <Comments posts={posts} />
+      <PostOnForm handleAddPost={handleAddPost}/>
       <Button sx={{ background: "black" }}>Make A Comment</Button>
+
     </div>
   );
 };

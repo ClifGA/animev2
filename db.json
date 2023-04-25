@@ -2,28 +2,51 @@
   "posts": [
     {
       "id": 1,
-      "title": "json-serv",
-      "author": "tyicode"
+      "title": "SAO!!!",
+      "username": "Michael Jeung",
+      "article": "Sword Art Online is the BEST"
     },
     {
       "id": 2,
-      "title": "json-s",
-      "author": "typicode"
+      "title": "Erased",
+      "username": "Queena Feng",
+      "article": "Super thrilling!!"
     },
     {
       "id": 3,
-      "title": "js-server",
-      "author":  "tpicode"
-    }
-  ],
-  "comments": [
+      "title": "Tsubasa Chronicles",
+      "username": "Michael Maurer II",
+      "article": "Sakuraaaa"
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "title": "Fairy Tales",
+      "username": "Cliffton",
+      "article": "Testing",
+      "id": 4
+    },
+    {
+      "title": "Testing",
+      "username": "Testing",
+      "article": "Testing",
+      "id": 5
+    },
+    {
+      "title": "HOMIE",
+      "username": "HOMIE",
+      "article": "HOMIE",
+      "id": 6
+    },
+    {
+      "title": "3",
+      "username": "3",
+      "article": "3",
+      "id": 7
+    },
+    {
+      "title": "2",
+      "username": "2",
+      "article": "2",
+      "id": 8
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

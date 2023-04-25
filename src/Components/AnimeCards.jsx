@@ -7,9 +7,12 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
 export default function AnimeCards({ animes }) {
-  console.log(animes);
   return (
-    <Card sx={{ maxWidth: 345 }} className="anime-card" style={{ height: "350px", width: "300px" }}>
+    <Card
+      sx={{ maxWidth: 345 }}
+      className="anime-card"
+      style={{ height: "450px", width: "300px" }}
+    >
       <CardMedia
         component="img"
         alt="green iguana"
@@ -17,7 +20,7 @@ export default function AnimeCards({ animes }) {
         image={animes.images.jpg.large_image_url}
       />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography gutterBottom variant="h6" component="div">
           {animes.title}
         </Typography>
         <Typography variant="body2" color="text.secondary">

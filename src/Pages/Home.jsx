@@ -6,9 +6,6 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import "/home/clifga/project-2/src/Components/CarouselCards.css";
 //import "react-alice-carousel/lib/scss/alice-carousel.scss";
 
-import AnimeList from "../Components/AnimeList";
-
-
 const Home = () => {
   const [topAnime, setTopAnime] = useState([]);
   useEffect(() => {
@@ -37,9 +34,11 @@ const Home = () => {
       <div>
         <br></br>
         <br></br>
+        <br></br>
         <h1>Top 25 Animes</h1>
       </div>
       <div className="carousel-container">
+        <br></br>
         <AliceCarousel
           role="presentation"
           stagePadding={{ paddingLeft: 10, paddingRight: 10 }}
@@ -48,7 +47,6 @@ const Home = () => {
           {renderCarousel}
         </AliceCarousel>
       </div>
-      <AnimeList />
     </div>
   );
 };
