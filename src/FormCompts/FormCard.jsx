@@ -3,15 +3,18 @@
 const FormCard = ({ posts }) => {
   return (
     <div
+      className="form-card"
       style={{
-        borderRadius: "10px",
-        backgroundColor: "#f2f2f2",
-        padding: "20px",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "columnStart",
+        width: "50%",
+        border: "2px solid black",
         margin: "10px",
+        padding: "10px",
+        backgroundColor: "white",
+        borderRadius: "10px",
+        boxShadow: "5px 5px 5px 5px",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
       }}
     >
       <div>
@@ -21,7 +24,6 @@ const FormCard = ({ posts }) => {
           </div>
           <p>username: {posts.username}</p>
         </div>
-
         <p>{posts.article}</p>
       </div>
     </div>
