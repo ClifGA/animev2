@@ -8,7 +8,7 @@ const MyFavorites = () => {
       .then((res) => res.json())
       .then((data) => SetFavAnime(data));
   }, []);
-  
+
   const updateFavs = (id) => {
     const deleteFavs = favAnime.filter((element) => {
       return element.id !== id;
@@ -17,9 +17,10 @@ const MyFavorites = () => {
   };
 
   const renderFavCards = favAnime.map((element) => {
-    return <FavCard key={element.title} fav={element} updateFavs={updateFavs}/>;
+    return (
+      <FavCard key={element.title} fav={element} updateFavs={updateFavs} />
+    );
   });
-
 
   return <div>{renderFavCards}</div>;
 };

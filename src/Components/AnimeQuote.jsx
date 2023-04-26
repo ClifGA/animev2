@@ -6,7 +6,7 @@ import "/home/clifga/new-project/Phase-2-Project-anime/src/Components/AnimeQuote
 function AnimeQuote({ quotes }) {
   return (
     <div className="QuoteCard">
-      <Typography gutterBottom variant="h4" component="div" color="red">
+      <Typography gutterBottom variant="h4" component="div" color="white">
         {"Today's Quote"}
       </Typography>
       <Typography gutterBottom variant="h5" component="div">

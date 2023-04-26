@@ -6,6 +6,7 @@ import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import "/home/clifga/project-2/src/Components/CarouselCards.css";
 import AnimeQuote from "../Components/AnimeQuote";
+import SearchAnime from "../Components/SearchAnime";
 
 const Home = () => {
   const [topAnime, setTopAnime] = useState([]);
@@ -40,17 +41,24 @@ const Home = () => {
     return <AnimeCards key={element.name} animes={element} />;
   });
   return (
-    <div className="container">
-      <div>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
+    <div
+      className="container"
+      style={{ display: "flex", flexDirection: "column" }}
+    >
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <div style={{ display: "flex" }}>
+        <div style={{ flex: 1 }}>
+          <AnimeQuote quotes={quotes} />
+        </div>
+        <div style={{ flex: 1 }}>
+          <SearchAnime />
+        </div>
       </div>
-      <AnimeQuote quotes={quotes} />
       <h1>Top 25 Animes</h1>
-      <div className="carousel-container">
-        <br></br>
+      <div className="carousel-container" style={{ flex: 1 }}>
         <AliceCarousel
           role="presentation"
           stagePadding={{ paddingLeft: 10, paddingRight: 10 }}
