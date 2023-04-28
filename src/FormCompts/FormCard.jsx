@@ -5,7 +5,7 @@ const FormCard = ({ posts }) => {
     <div
       className="form-card"
       style={{
-        width: "50%",
+        width: "100%",
         border: "2px solid black",
         margin: "10px",
         padding: "10px",
@@ -14,7 +14,8 @@ const FormCard = ({ posts }) => {
         boxShadow: "5px 5px 5px 5px",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "space-between",
+        justifyContent: "center",
+        alignItems: "center",
       }}
     >
       <div>

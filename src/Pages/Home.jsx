@@ -4,7 +4,7 @@ import AnimeCards from "../Components/AnimeCards";
 import { useEffect, useState } from "react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
-import "/home/clifga/project-2/src/Components/CarouselCards.css";
+
 import AnimeQuote from "../Components/AnimeQuote";
 import SearchAnime from "../Components/SearchAnime";
 
@@ -59,7 +59,8 @@ const Home = () => {
       </div>
       <h1>Top 25 Animes</h1>
       <div className="carousel-container" style={{ flex: 1 }}>
-        <AliceCarousel className="carousel"
+        <AliceCarousel
+          className="carousel"
           autoPlay
           autoPlayInterval="2000"
           infinite

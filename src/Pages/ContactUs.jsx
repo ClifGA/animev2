@@ -1,18 +1,9 @@
+import "../Pages/ContactUs.css";
+
 const ContactUs = () => {
   return (
-    <div>
-      <br />
-      <br />
-      <br />
-      <h1
-        style={{
-          color: "black",
-          textShadow: "2px 2px 2px black",
-          fontSize: "50px",
-          textAlign: "center",
-          fontFamily: "sans-serif",
-        }}
-      >
+    <div className="contact-card">
+      <h1 className="title">
         {" "}
         DO NOT CONTACT US WE ARE VERY BUSY
       </h1>
