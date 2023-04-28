@@ -59,7 +59,13 @@ const Home = () => {
       </div>
       <h1>Top 25 Animes</h1>
       <div className="carousel-container" style={{ flex: 1 }}>
-        <AliceCarousel
+        <AliceCarousel className="carousel"
+          autoPlay
+          autoPlayInterval="2000"
+          infinite
+          mouseTracking
+          disableDotsControls
+          disableButtonsControls
           role="presentation"
           stagePadding={{ paddingLeft: 10, paddingRight: 10 }}
           responsive={responsive}

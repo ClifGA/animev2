@@ -10,7 +10,6 @@ const App = () => {
   return (
     <BrowserRouter>
       <MuiNavBar></MuiNavBar>
-
       <div>
         <Routes>
           <Route path="/" element={<Home />} />

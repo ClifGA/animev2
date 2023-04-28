@@ -80,7 +80,7 @@ const SearchAnime = () => {
           type="submit"
           style={{
             width: "100%",
-            backgroundColor: "#4CAF50",
+            backgroundColor: "black",
             color: "white",
             padding: "14px 20px",
             margin: "8px 0",
